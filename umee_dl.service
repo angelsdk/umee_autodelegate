@@ -1,0 +1,11 @@
+[Unit]
+Description=Autodelegate Umee
+After=network-online.target
+[Service]
+User=root
+ExecStart=/bin/bash /root/autodelegate.sh
+Restart=always
+RestartSec=10
+LimitNOFILE=10000
+[Install]
+WantedBy=multi-user.target
