@@ -16,7 +16,7 @@ do
                 echo "Stake ${amount} uumee"
                 echo "${password}" | umeed tx staking delegate ${valoper} ${amount}uumee --chain-id=${chain} --from=${wallet} --gas=auto --fees=200uumee -y
         fi
-   sleep 20
+  sleep 20
   power=$(curl -s localhost:26657/status | jq -r .result.validator_info.voting_power)
                 echo "Your voting power ${power}"
   sleep 3600
